@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+fieldset{
+	width:550px;
+	padding:10px;
+}
+label{
+width:120px;
+	float: left;
+	display: block;
+}
+fieldset p:last-child input{
+	margin-left:120px;
+}
+.error{
+	color:red;
+	font-size: 10px;
+	display: none;
+}
+table, td{
+	border:1px solid black;
+	border-collapse: collapse;
+	padding:10px;
+}
