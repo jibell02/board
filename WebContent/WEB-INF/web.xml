@@ -24,6 +24,28 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
+
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name> <!-- 클래스 이름 그대로 -->
+		<filter-class>com.khrd.util.CharacterEncodingFilter</filter-class> <!-- 패키지명.클래스명 -->
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern> <!-- 어떤 커멘드가 호출이 되든 간에 맵핑의 필터네임이랑 같은 클래스 명을 찾아가도록 함. 필터와 필터맵핑의 네임은 같게 해주면 됨(XX로 통일시켜도 상관은 없음). -->
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>LoginCheckFilter</filter-name>
+		<filter-class>com.khrd.util.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginCheckFilter</filter-name>
+		<url-pattern>/article/add.do</url-pattern><!-- 모든 커멘드일때 갈 필요없고 특정커멘드만 넣어도됨. 그래서 .*안씀 -->
+		<url-pattern>/article/update.do</url-pattern>
+		<url-pattern>/article/delete.do</url-pattern>
+	</filter-mapping>
+	
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>

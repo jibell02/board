@@ -38,7 +38,6 @@ public class ArticleUpdateHandler implements CommandHandler {
 			}
 			
 		}else if(request.getMethod().equalsIgnoreCase("post")) { // updateForm에서 수정 버튼 눌렀을 때 이루어지는 부분.
-			request.setCharacterEncoding("utf-8");
 			
 			String sNo = request.getParameter("article_no");
 			int no = Integer.parseInt(sNo);

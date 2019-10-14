@@ -16,7 +16,6 @@ public class ListHandler implements CommandHandler {
 
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		request.setCharacterEncoding("utf-8");
 
 		Connection conn = null;
 		try {
